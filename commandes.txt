@@ -1,0 +1,23 @@
+python setup.py build_ext --inplace
+
+python3 main.py -d working-dir -f input-file -s number-of-sample -k number-of-clusters -n number-of-iteration -m number-of-mappers -t number-of-tasks
+
+
+   d: working-dir: working directory(also directory of check-in dataset)
+   f: input-file: file name of dataset
+   s:  number-of-sample: number of samples you want to cluster
+   k: number-of-clusters: number of clusters
+   n: number-of-iteration: max iteration for clustering
+   m: number-of-mappers: mappers in MapReduce
+   t: number-of-tasks: tasks in MapReduce
+
+python main.py -d C:\Users\rudy\Desktop\chapitre5\mapreduce-rudy\data -f Gowalla_totalCheckins.txt -s 50000 -k 20 -n 20 -m 10 -t 2
+
+gowalla data:https://snap.stanford.edu/data/loc-gowalla.html
+
+Dataset information
+
+Gowalla is a location-based social networking website where users share their locations by checking-in. 
+The friendship network is undirected and was collected using their public API, 
+and consists of 196,591 nodes and 950,327 edges. 
+We have collected a total of 6,442,890 check-ins of these users over the period of Feb. 2009 - Oct. 2010. 
